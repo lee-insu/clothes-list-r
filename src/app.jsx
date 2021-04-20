@@ -1,12 +1,14 @@
 import Header from './components/header/header';
-import Weather from './components/weather/weather';
+import TodayWeather from './components/today/today_weather/today_weather';
 import styles from './app.module.css';
+import PredictWeather from './components/predict/predict_weather/predict_weather';
 
 function App() {
   return (
       <div className={styles.inner}>
         <Header />
-        <Weather />
+        <TodayWeather />
+        <PredictWeather/>
       </div>
       
   );
