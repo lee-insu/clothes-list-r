@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PredictWeatherList = () => (
-            <div>list</div>
+            <div>predict list</div>
     );
 
 export default PredictWeatherList;

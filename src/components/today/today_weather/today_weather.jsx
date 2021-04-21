@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TodayWeatherClothes from '../today_weather_clothes/today_weather_clothes.jsx';
+import TodayClothesList from '../today_clothes_list/today_clothes_list.jsx';
 import TodayWeatherCtn from '../today_weather_ctn/today_weather_ctn.jsx';
 
 
@@ -22,7 +22,7 @@ const TodayWeather = () => {
                 setQuery('');
             });
                 
-                console.log(weather.main);
+                console.log(weather.weather);
         }
     }
 
@@ -33,10 +33,9 @@ const TodayWeather = () => {
                value = {query}
                onKeyPress = {search}
         />
-        {(typeof weather.main != "undefined") ? (
-        <TodayWeatherCtn weather={weather}/>): ('')}
-        <ul> 
-        <TodayWeatherClothes />
+        <TodayWeatherCtn weather={weather}/>
+        <ul>
+        <TodayClothesList />
         </ul>
         </> 
     ) 
