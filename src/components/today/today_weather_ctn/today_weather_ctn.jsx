@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TodayWeatherCtn = ()=> {
+const TodayWeatherCtn = e => {
 
     const dateBulider = (d) => {
         let months = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
@@ -17,7 +17,11 @@ const TodayWeatherCtn = ()=> {
 
       return (
             <nav className="location-box">
-                <div className="location">seoul</div>
+                <div className="location">{e.weather.name}, 
+                {Math.round(e.weather.main.temp)},
+                {e.weather.weather[0].main}
+
+                </div> 
                 <div className="date">{dateBulider(new Date())}</div>
             </nav>
     )
