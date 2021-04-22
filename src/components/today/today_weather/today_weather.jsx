@@ -8,6 +8,7 @@ const TodayWeather = () => {
 
     const[query,setQuery] = useState('');
     const[weather,setWeather] = useState({});
+    const[listTemp,setlistTemp] = useState({});
 
     const apiKey = process.env.REACT_APP_API_KEY;
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}`;
@@ -20,11 +21,14 @@ const TodayWeather = () => {
             .then(result => {
                 setWeather(result);
                 setQuery('');
+                setlistTemp(result.main.temp);
             });
-                
-                console.log(weather.weather);
         }
     }
+
+
+
+     
 
     return(    
         <>
@@ -35,7 +39,7 @@ const TodayWeather = () => {
         />
         <TodayWeatherCtn weather={weather}/>
         <ul>
-        <TodayClothesList />
+        <TodayClothesList temp={listTemp} />
         </ul>
         </> 
     ) 
