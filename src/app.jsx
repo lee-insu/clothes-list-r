@@ -10,7 +10,6 @@ function App() {
         <Header />
         <PlaceWeather />
         <TodayWeather />
-        
       </div>
       
   );
