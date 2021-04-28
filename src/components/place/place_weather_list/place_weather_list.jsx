@@ -38,7 +38,7 @@ const PlaceWeatherList = e => {
         }
 
     return (
-         <div>{season}</div>
+         <li>{season}</li>
     )
 };
 export default PlaceWeatherList;
