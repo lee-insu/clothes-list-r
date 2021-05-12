@@ -1,6 +1,8 @@
 import React from 'react';
 
+
 const PlaceWeatherList = e => {
+
     
     const temp = Math.round(e.temp)-273;
 
@@ -29,7 +31,7 @@ const PlaceWeatherList = e => {
                 season = "블라우스, 긴발티, 면바지, 슬렉스"
                 break;
             case (temp < 27):
-                season = "반팔, 얇은 셔츠, 반바지, 면바지, 나시"
+                season = <h1>반팔, 얇은 셔츠, 반바지, 면바지, 나시</h1>
                 break; 
             default :
                 ;
@@ -38,7 +40,7 @@ const PlaceWeatherList = e => {
         }
 
     return (
-         <li>{season}</li>
+    <li>{season}</li>
     )
 };
 export default PlaceWeatherList;

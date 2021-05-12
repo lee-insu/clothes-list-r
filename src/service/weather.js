@@ -10,3 +10,5 @@ getNowWeather() {
 }
 
 }
+
+export default Weather;
